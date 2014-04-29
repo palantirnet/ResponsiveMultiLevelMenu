@@ -78,7 +78,7 @@
 			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">' + this.options.backLabel + '</a></li>' );
 			this.$back = this.$menu.find( 'li.dl-back' );
 
-      // Set the label text for the back link.
+			// Set the label text for the back link.
 			if (this.options.useActiveItemAsBackLabel) {
 				this.$back.each(function() {
 					var $this = $(this),
@@ -87,14 +87,14 @@
 					$this.find('a').html(parentLabel);
 				});
 			}
-      // If the active item should also be a clickable link, create one and put
-      // it at the top of our menu.
-      if (this.options.useActiveItemAsLink) {
-        this.$el.find( 'ul.dl-submenu' ).prepend(function() {
-          var parentli = $(this).parents('li:not(.dl-back):first').find('a:first');
-          return '<li class="dl-parent"><a href="' + parentli.attr('href') + '">' + parentli.text() + '</a></li>';
-        });
-      }
+			// If the active item should also be a clickable link, create one and put
+			// it at the top of our menu.
+			if (this.options.useActiveItemAsLink) {
+				this.$el.find( 'ul.dl-submenu' ).prepend(function() {
+					var parentli = $(this).parents('li:not(.dl-back):first').find('a:first');
+					return '<li class="dl-parent"><a href="' + parentli.attr('href') + '">' + parentli.text() + '</a></li>';
+				});
+			}
 
 		},
 		_initEvents : function() {
@@ -119,8 +119,8 @@
 				var $item = $(this),
 					$submenu = $item.children( 'ul.dl-submenu' );
 
-        // Only go to the next menu level if one exists AND the link isn't the
-        // one we added specifically for navigating to parent item pages.
+				// Only go to the next menu level if one exists AND the link isn't the
+				// one we added specifically for navigating to parent item pages.
 				if( ($submenu.length > 0) && !($(event.currentTarget).hasClass('dl-subviewopen'))) {
 
 					var $flyin = $submenu.clone().css( 'opacity', 0 ).insertAfter( self.$menu ),
