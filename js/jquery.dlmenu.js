@@ -35,7 +35,7 @@
 		useActiveItemAsBackLabel: false,
     // Change to "true" to add a navigable link to the active item to its child
     // menu.
-		useActiveItemAsLink: false
+		useActiveItemAsLink: true
 	};
 
 	$.DLMenu.prototype = {
