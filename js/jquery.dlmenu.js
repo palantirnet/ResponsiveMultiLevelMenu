@@ -102,6 +102,7 @@
 			var self = this;
 
 			this.$trigger.on( 'click.dlmenu', function() {
+				
 				if( self.open ) {
 					self._closeMenu();
 				}
@@ -113,7 +114,7 @@
 			} );
 
 			this.$menuitems.on( 'click.dlmenu', function( event ) {
-
+				
 				event.stopPropagation();
 
 				var $item = $(this),
