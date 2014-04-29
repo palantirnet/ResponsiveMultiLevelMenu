@@ -45,7 +45,7 @@
 			this.options = $.extend( true, {}, $.DLMenu.defaults, options );
 			// cache some elements and initialize some variables
 			this._config();
-
+			
 			var animEndEventNames = {
 					'WebkitAnimation' : 'webkitAnimationEnd',
 					'OAnimation' : 'oAnimationEnd',
@@ -153,7 +153,7 @@
 			} );
 
 			this.$back.on( 'click.dlmenu', function( event ) {
-
+				
 				var $this = $( this ),
 					$submenu = $this.parents( 'ul.dl-submenu:first' ),
 					$item = $submenu.parent(),
@@ -176,7 +176,7 @@
 					}
 
 					$item.removeClass( 'dl-subviewopen' );
-
+					
 					var $subview = $this.parents( '.dl-subview:first' );
 					if( $subview.is( 'li' ) ) {
 						$subview.addClass( 'dl-subviewopen' );
@@ -187,7 +187,7 @@
 				return false;
 
 			} );
-
+			
 		},
 		closeMenu : function() {
 			if( this.open ) {
@@ -200,11 +200,11 @@
 					self.$menu.off( self.transEndEventName );
 					self._resetMenu();
 				};
-
+			
 			this.$menu.removeClass( 'dl-menuopen' );
 			this.$menu.addClass( 'dl-menu-toggle' );
 			this.$trigger.removeClass( 'dl-active' );
-
+			
 			if( this.supportTransitions ) {
 				this.$menu.on( this.transEndEventName, onTransitionEndFn );
 			}
