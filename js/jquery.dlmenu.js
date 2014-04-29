@@ -31,10 +31,10 @@
 		// el is the link element (li); ev is the event obj
 		onLinkClick : function( el, ev ) { return false; },
 		backLabel: 'Back',
-    // Change to "true" to use the active item as back link label.
+		// Change to "true" to use the active item as back link label.
 		useActiveItemAsBackLabel: false,
-    // Change to "true" to add a navigable link to the active item to its child
-    // menu.
+		// Change to "true" to add a navigable link to the active item to its child
+		// menu.
 		useActiveItemAsLink: false
 	};
 
